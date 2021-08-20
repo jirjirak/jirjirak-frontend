@@ -45,7 +45,7 @@ export const addRefreshTokenInterceptor = (refreshToken: string) => {
     (response) => {
       return response;
     },
-    function (error) {
+    (error) => {
       const originalRequest = error.config;
       if (error.response.status === 401 && !originalRequest._retry) {
         originalRequest._retry = true;
