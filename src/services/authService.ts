@@ -1,4 +1,30 @@
+import Cookies from 'js-cookie';
+
 class AuthService {
+  TOKEN_KEY = 'JWT_TOKEN';
+
+  REFRESH_TOKEN_KEY = 'REFRESH_TOKEN';
+
+  setSession = (token: string, refreshToken?: string) => {
+    Cookies.set(this.TOKEN_KEY, token);
+    if (refreshToken) {
+      Cookies.set(this.REFRESH_TOKEN_KEY, refreshToken);
+    }
+  };
+
+  getActiveSession = () => {
+    return {
+      token: Cookies.get(this.TOKEN_KEY),
+      refreshToken: Cookies.get(this.REFRESH_TOKEN_KEY),
+    };
+  };
+
+  logOut = () => {
+    localStorage.clear();
+    Cookies.remove(this.TOKEN_KEY);
+    Cookies.remove(this.REFRESH_TOKEN_KEY);
+  };
+
   handleAuthentication = () => {
     const accessToken = this.getAccessToken();
     if (!accessToken || !this.isValidToken(accessToken)) return;
@@ -22,20 +48,12 @@ class AuthService {
     };
   };
 
-  setSession = (key: string, accessToken: string) => {
-    localStorage.setItem(key, accessToken);
-  };
-
-  logOut = () => {
-    localStorage.clear();
-  };
-
   getUser = () => {
     const user = localStorage.getItem('user') || '';
     return user;
   };
 
-  getAccessToken = () => localStorage.getItem('accessToken');
+  getAccessToken = () => Cookies.get(this.TOKEN_KEY);
 
   isAuthenticated = () => !!this.getAccessToken();
 

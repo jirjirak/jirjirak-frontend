@@ -1,4 +1,6 @@
 {
   "PROFILE": "Profile",
-  "LOGOUT": "Logout"
+  "LOGOUT": "Logout",
+  "LOGIN": "Sign in to Jirjirak",
+  "ERROR_REQUIRED": "this field is required"
 }

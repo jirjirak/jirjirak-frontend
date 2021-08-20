@@ -1,24 +1,31 @@
 import { Dispatch } from 'redux';
-
-// types
 import { IAuthActionTypes } from 'models/IAuthState';
-import { IHistory } from 'models/ICommon';
 
 // services
 import authService from 'services/authService';
 
 // configs
-import { PATH_NAME } from 'configs';
+import { getUserInfo } from 'apis/auth.api';
 
-export const login = (username: string, roleUser: string, history: IHistory) => async (dispatch: Dispatch<any>) => {
-  dispatch({ type: IAuthActionTypes.LOGIN_REQUEST });
+export const tokensAction = (token: string, refreshToken: string) => {
+  authService.setSession(token, refreshToken);
+  return {
+    type: IAuthActionTypes.SET_TOKEN,
+    payload: { token, refreshToken },
+  };
+};
 
-  const { user, role } = await authService.loginWithAuth0(username, roleUser);
+export const getUserInfoAction = () => async (dispatch: any) => {
+  const userInfo = await getUserInfo();
   dispatch({
-    type: IAuthActionTypes.LOGIN_SUCCESS,
-    payload: { user, role },
+    type: IAuthActionTypes.SET_USER,
+    payload: { user: userInfo },
   });
-  history.push(PATH_NAME.ROOT);
+};
+
+export const loginAction = (token: string, refreshToken: string) => async (dispatch: Dispatch<any>) => {
+  dispatch(tokensAction(token, refreshToken));
+  await dispatch(getUserInfo);
 };
 
 export const logout = () => (dispatch: Dispatch<any>) => {

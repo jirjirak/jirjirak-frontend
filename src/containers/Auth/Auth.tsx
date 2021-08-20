@@ -1,28 +1,30 @@
-import React, { useEffect, FC } from 'react';
+import React, { useEffect, FC, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 // services
 import authService from 'services/authService';
 
 // actions
-import { setUserData } from 'redux/actions/auth.action';
+import { getUserInfoAction, setUserData, tokensAction } from 'redux/actions/auth.action';
+import LoadingPage from 'containers/LoadingPage';
 
 const Auth: FC = ({ children }) => {
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    function initAuth() {
-      authService.handleAuthentication();
-
-      if (authService.isAuthenticated()) {
-        const user = authService.getUser();
-        const parseUser = JSON.parse(user);
-        dispatch(setUserData(parseUser.username, parseUser.roleUser));
+    async function initAuth() {
+      const { token, refreshToken } = authService.getActiveSession();
+      if (token && refreshToken) {
+        dispatch(tokensAction(token, refreshToken));
+        await dispatch(getUserInfoAction());
       }
+      setLoading(false);
     }
     initAuth();
   }, [dispatch]);
 
+  if (loading) return <LoadingPage />;
   return <>{children}</>;
 };
 

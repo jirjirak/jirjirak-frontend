@@ -2,34 +2,29 @@ import { IAuthActionTypes, IAuthActionCreator, IAuthState } from 'models/IAuthSt
 
 const initialState: IAuthState = {
   user: null,
-  role: null,
+  token: null,
+  refreshToken: null,
+  role: 'ADMIN',
 };
 
 const reducer = (state = initialState, { type, payload }: IAuthActionCreator) => {
   switch (type) {
-    case IAuthActionTypes.LOGIN_SUCCESS:
+    case IAuthActionTypes.SET_TOKEN:
+      return {
+        ...state,
+        token: payload.token,
+        refreshToken: payload.refreshToken,
+      };
+
+    case IAuthActionTypes.SET_USER:
       return {
         ...state,
         user: payload.user,
-        role: payload.role,
       };
-    case IAuthActionTypes.LOGIN_FAILURE:
-      return {
-        ...state,
-        user: null,
-      };
+
     case IAuthActionTypes.LOGOUT:
-      return {
-        ...state,
-        user: null,
-        role: null,
-      };
-    case IAuthActionTypes.SILENT_LOGIN:
-      return {
-        ...state,
-        user: payload.user,
-        role: payload.role,
-      };
+      return initialState;
+
     default:
       return state;
   }
