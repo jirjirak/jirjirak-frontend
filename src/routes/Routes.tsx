@@ -1,18 +1,14 @@
-import React, { Fragment, lazy, Suspense } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
-
 // configs
 import { PATH_NAME, USER_ROLE } from 'configs';
-
-// types
-import { IRoutes } from 'models/IRoutes';
-
-// layouts
-import MainLayout from 'layouts/MainLayout';
-
 // containers
 import AuthGuard from 'guards/AuthGuard';
 import GuestGuard from 'guards/GuestGuard';
+// layouts
+import MainLayout from 'layouts/MainLayout';
+// types
+import type { IRoutes } from 'models/IRoutes';
+import React, { Fragment, lazy, Suspense } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 // route
 import RoleRoute from './RoleRoute';

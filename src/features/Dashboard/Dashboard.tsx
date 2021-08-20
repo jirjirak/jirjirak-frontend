@@ -1,23 +1,21 @@
-import React from 'react';
-import Chart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts';
-import clsx from 'clsx';
-
+import Box from '@material-ui/core/Box';
+import Checkbox from '@material-ui/core/Checkbox';
+import Chip from '@material-ui/core/Chip';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Chip from '@material-ui/core/Chip';
-
+import type { ApexOptions } from 'apexcharts';
+import clsx from 'clsx';
 // styles
 import useCommonStyles from 'hooks/useCommonStyles';
+import React from 'react';
+import Chart from 'react-apexcharts';
 
 function createData(status: string, number: number) {
   return { status, number };

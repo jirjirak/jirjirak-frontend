@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react';
-
 import Axios from 'axios';
-
+import { useEffect, useState } from 'react';
 import axios from 'services/axiosInstance';
 
 const useGet = (url: string, params = {}, delay = process.env.REACT_APP_DELAY_GET_DATA) => {

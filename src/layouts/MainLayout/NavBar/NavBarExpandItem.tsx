@@ -1,17 +1,14 @@
-import React, { useState, memo } from 'react';
-import clsx from 'clsx';
-
 // material core
 import Button from '@material-ui/core/Button';
 import Collapse from '@material-ui/core/Collapse';
 import ListItem from '@material-ui/core/ListItem';
-
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 // material icon
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-
+import clsx from 'clsx';
 // types
-import { INavBarExpandItem } from 'models/INavBar';
+import type { INavBarExpandItem } from 'models/INavBar';
+import React, { memo, useState } from 'react';
 
 // styles
 import useStyles from './styles';

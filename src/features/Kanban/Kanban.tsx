@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import clsx from 'clsx';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/Add';
+import clsx from 'clsx';
+import React, { useState } from 'react';
 
-import TaskViewModal from './components/TaskViewModal';
 import TaskEditModal from './components/TaskAddEditModal';
-
+import TaskViewModal from './components/TaskViewModal';
 // styles
 import useStyles from './styles';
 

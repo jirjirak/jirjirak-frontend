@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-import { IStyles } from './AlertConfirm';
+import type { IStyles } from './AlertConfirm';
 
 const useStyles = (props: IStyles) =>
   makeStyles(() => ({

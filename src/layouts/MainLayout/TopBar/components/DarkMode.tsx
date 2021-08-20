@@ -1,17 +1,13 @@
-import React, { memo } from 'react';
-
 // material core
 import IconButton from '@material-ui/core/IconButton';
-
 // material icon
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
-
 // configs
 import { THEMES } from 'configs';
-
 // context
 import { useGlobalContext } from 'context/GlobalContext';
+import React, { memo } from 'react';
 
 function DarkMode() {
   const { modeTheme, setModeTheme } = useGlobalContext();

@@ -1,6 +1,6 @@
+import { Box, Button, Container, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Button, Container, Typography, useTheme, useMediaQuery, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,19 +1,17 @@
-import React, { FC } from 'react';
-import { NavLink as RouterLink } from 'react-router-dom';
-import clsx from 'clsx';
-
 // material core
 import Button from '@material-ui/core/Button';
-import ListItem from '@material-ui/core/ListItem';
 import Link from '@material-ui/core/Link';
-
+import ListItem from '@material-ui/core/ListItem';
+import clsx from 'clsx';
 // types
 import { canAction } from 'helpers';
-
 // components
-import { INavBarItem } from 'models/INavBar';
-import NavBarExpandItem from './NavBarExpandItem';
+import type { INavBarItem } from 'models/INavBar';
+import type { FC } from 'react';
+import React from 'react';
+import { NavLink as RouterLink } from 'react-router-dom';
 
+import NavBarExpandItem from './NavBarExpandItem';
 // styles
 import useStyles from './styles';
 

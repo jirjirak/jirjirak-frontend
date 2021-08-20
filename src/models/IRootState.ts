@@ -1,5 +1,5 @@
-import { IAppState } from './IAppState';
-import { IAuthState } from './IAuthState';
+import type { IAppState } from './IAppState';
+import type { IAuthState } from './IAuthState';
 
 type IRootState = {
   app: IAppState;

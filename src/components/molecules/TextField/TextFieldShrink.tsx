@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { withStyles, Theme } from '@material-ui/core/styles';
-
+import type { Theme } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 // material core
-import TextField, { TextFieldProps } from '@material-ui/core/TextField';
+import type { TextFieldProps } from '@material-ui/core/TextField';
+import TextField from '@material-ui/core/TextField';
 import Tooltip from '@material-ui/core/Tooltip';
-
 // matrial icon
 import HelpIcon from '@material-ui/icons/Help';
-
 // styles
-import TypographyBase from 'components/atoms/TypographyBase';
+import React, { useEffect, useState } from 'react';
+
 import useStyles from './styles';
 
 const CustomToolTip = withStyles((theme: Theme) => ({

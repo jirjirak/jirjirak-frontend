@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
-import { Redirect } from 'react-router';
-
 // configs
 import { PATH_NAME } from 'configs';
-
+import type { FC } from 'react';
+import React from 'react';
+import { Redirect } from 'react-router';
 // services
 import authService from 'services/authService';
 

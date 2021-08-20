@@ -1,12 +1,10 @@
+import { useSnackbar } from 'notistack';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useSnackbar } from 'notistack';
-
-// selectors
-import { notificationsSelector } from 'redux/selectors/app.selector';
-
 // actions
 import { removeSnackbar } from 'redux/actions/app.action';
+// selectors
+import { notificationsSelector } from 'redux/selectors/app.selector';
 
 let displayed: any[] = [];
 

@@ -1,12 +1,11 @@
-import React, { useEffect, FC, useState } from 'react';
+import LoadingPage from 'containers/LoadingPage';
+import type { FC } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-
+// actions
+import { getUserInfoAction, tokensAction } from 'redux/actions/auth.action';
 // services
 import authService from 'services/authService';
-
-// actions
-import { getUserInfoAction, setUserData, tokensAction } from 'redux/actions/auth.action';
-import LoadingPage from 'containers/LoadingPage';
 
 const Auth: FC = ({ children }) => {
   const [loading, setLoading] = useState(true);

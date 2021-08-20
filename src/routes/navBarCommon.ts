@@ -1,14 +1,13 @@
 // material icon
 import AddIcon from '@material-ui/icons/Add';
-import ShopIcon from '@material-ui/icons/Shop';
-import ViewListIcon from '@material-ui/icons/ViewList';
-import PeopleIcon from '@material-ui/icons/People';
-import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
-import DashboardIcon from '@material-ui/icons/Dashboard';
 import AssessmentIcon from '@material-ui/icons/Assessment';
-
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import PeopleIcon from '@material-ui/icons/People';
+import ShopIcon from '@material-ui/icons/Shop';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+import ViewListIcon from '@material-ui/icons/ViewList';
 // configs
-import { PATH_NAME, DRAWER_MENU_LABEL } from 'configs';
+import { DRAWER_MENU_LABEL, PATH_NAME } from 'configs';
 
 export const navBarCommon = [
   {

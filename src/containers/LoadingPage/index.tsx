@@ -1,5 +1,7 @@
 import { CircularProgress } from '@material-ui/core';
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
+import React from 'react';
+
 import useStyles from './styles';
 
 function LoadingPage(): ReactElement {

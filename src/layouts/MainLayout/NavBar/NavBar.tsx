@@ -1,21 +1,18 @@
-import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { useLocation, matchPath } from 'react-router';
-
+import Divider from '@material-ui/core/Divider';
 // material core
 import Drawer from '@material-ui/core/Drawer';
-import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListSubheader from '@material-ui/core/ListSubheader';
-
+import { PATH_NAME } from 'configs';
+// types
+import type { IChildNavBar } from 'models/INavBar';
+import React, { memo } from 'react';
+import { matchPath, useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 // configs
 import { navBarCommon } from 'routes/navBarCommon';
-import { PATH_NAME } from 'configs';
 
-// types
-import { IChildNavBar } from 'models/INavBar';
 import NavBarItem from './NavBarItem';
-
 // styles
 import useStyles from './styles';
 

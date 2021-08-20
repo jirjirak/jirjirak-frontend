@@ -1,10 +1,12 @@
-import React, { ReactElement } from 'react';
-import { Field, Formik, FormikConfig } from 'formik';
-import { TextField } from 'formik-material-ui';
-import Button from '@material-ui/core/Button';
 import { Fade } from '@material-ui/core';
-
+import Button from '@material-ui/core/Button';
+import type { FormikConfig } from 'formik';
+import { Field, Formik } from 'formik';
+import { TextField } from 'formik-material-ui';
 import { useTypeSafeTranslation } from 'hooks/useTypeSafeTranslation';
+import type { ReactElement } from 'react';
+import React from 'react';
+
 import useStyles from './styles';
 
 type FormValues = {

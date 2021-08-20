@@ -1,10 +1,11 @@
-import React from 'react';
-import { VariableSizeList as List, ListChildComponentProps } from 'react-window';
-
+import ListSubheader from '@material-ui/core/ListSubheader';
 // material core
 import TextField from '@material-ui/core/TextField';
-import Autocomplete, { AutocompleteRenderOptionState } from '@material-ui/lab/Autocomplete';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import type { AutocompleteRenderOptionState } from '@material-ui/lab/Autocomplete';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import React from 'react';
+import type { ListChildComponentProps } from 'react-window';
+import { VariableSizeList as List } from 'react-window';
 
 const LISTBOX_PADDING = 8; // px
 

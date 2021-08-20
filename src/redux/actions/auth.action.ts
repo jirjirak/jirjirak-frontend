@@ -1,11 +1,9 @@
-import { Dispatch } from 'redux';
-import { IAuthActionTypes } from 'models/IAuthState';
-
-// services
-import authService from 'services/authService';
-
 // configs
 import { getUserInfo } from 'apis/auth.api';
+import { IAuthActionTypes } from 'models/IAuthState';
+import type { Dispatch } from 'redux';
+// services
+import authService from 'services/authService';
 
 export const tokensAction = (token: string, refreshToken: string) => {
   authService.setSession(token, refreshToken);

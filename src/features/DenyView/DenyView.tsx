@@ -1,11 +1,9 @@
+import { Box, Button, Container, Grid, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core';
+// configs
+import { PATH_NAME } from 'configs';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
-import { Box, Button, Container, Typography, Grid, useTheme, useMediaQuery, makeStyles } from '@material-ui/core';
-
-// configs
-import { PATH_NAME } from 'configs';
-
 // actions
 import { logout } from 'redux/actions/auth.action';
 

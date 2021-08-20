@@ -1,4 +1,4 @@
-import { IUser } from './IUser';
+import type { IUser } from './IUser';
 
 export enum IAuthActionTypes {
   SET_TOKEN = 'AUTH/SET_TOKEN',

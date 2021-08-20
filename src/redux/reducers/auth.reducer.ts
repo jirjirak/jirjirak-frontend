@@ -1,4 +1,5 @@
-import { IAuthActionTypes, IAuthActionCreator, IAuthState } from 'models/IAuthState';
+import type { IAuthActionCreator, IAuthState } from 'models/IAuthState';
+import { IAuthActionTypes } from 'models/IAuthState';
 
 const initialState: IAuthState = {
   user: null,

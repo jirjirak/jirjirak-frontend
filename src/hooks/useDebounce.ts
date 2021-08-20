@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const useDebounce = (text: string, delay: number = process.env.REACT_APP_DEBOUNCE_TIME) => {
   const [debounced, setDebounced] = useState<string>(text);

@@ -1,4 +1,5 @@
-import React, { ComponentType } from 'react';
+import type { ComponentType } from 'react';
+import type React from 'react';
 
 type ICommon = {
   exact?: boolean;

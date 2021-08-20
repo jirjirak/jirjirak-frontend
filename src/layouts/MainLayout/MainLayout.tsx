@@ -1,20 +1,17 @@
-import React, { useState, useCallback, FC } from 'react';
-
-// libs
-import clsx from 'clsx';
-
 // material core
 import CssBaseline from '@material-ui/core/CssBaseline';
-
+// libs
+import clsx from 'clsx';
 // containers
 import ErrorBoundary from 'containers/ErrorBoundary';
+import type { FC } from 'react';
+import React, { useCallback, useState } from 'react';
 
 // components
 import NavBar from './NavBar';
-import TopBar from './TopBar';
-
 // styles
 import useStyles from './styles';
+import TopBar from './TopBar';
 
 const MainLayout: FC = ({ children }) => {
   const classes = useStyles();

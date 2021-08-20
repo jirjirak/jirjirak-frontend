@@ -26,4 +26,4 @@ function stableSort(array: any[], comparator: (a: string, b: string) => number):
   return stabilizedThis.map((el) => el[0]);
 }
 
-export { stableSort, getComparator };
+export { getComparator, stableSort };

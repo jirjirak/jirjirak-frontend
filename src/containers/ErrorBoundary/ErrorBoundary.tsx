@@ -1,8 +1,3 @@
-import React, { useState, useEffect, useCallback, FC } from 'react';
-
-// libs
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-
 // material core
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -11,6 +6,11 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Typography from '@material-ui/core/Typography';
+import type { FC } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+// libs
+import type { FallbackProps } from 'react-error-boundary';
+import { ErrorBoundary } from 'react-error-boundary';
 
 const DefaultPage: FC = ({ children }) => {
   const [boundaryKey, setBoundaryKey] = useState(0);

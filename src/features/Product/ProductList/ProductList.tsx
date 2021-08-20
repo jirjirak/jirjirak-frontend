@@ -1,6 +1,6 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 // material core
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -8,22 +8,17 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
 import AddIcon from '@material-ui/icons/Add';
-
 // atomic
 import PaginationBase from 'components/molecules/PaginationBase';
-
 // configs
 import { PATH_NAME } from 'configs';
-
 // helpers
 import { canAction } from 'helpers';
-
 // hooks
 import usePagination from 'hooks/usePagination';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 function createData(name: string, calories: number, fat: number, carbs: number, protein: number) {
   return { name, calories, fat, carbs, protein };

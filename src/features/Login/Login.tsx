@@ -1,21 +1,19 @@
+import { Grid, Hidden, Tab, Tabs } from '@material-ui/core';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import { Facebook, GitHub } from '@material-ui/icons';
+import { localLogin, localRegister } from 'apis/auth.api';
+import AuthProviderButton from 'components/atoms/AuthProviderButton';
+import { PATH_NAME } from 'configs';
+import { useTypeSafeTranslation } from 'hooks/useTypeSafeTranslation';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
-// material core
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import { useTypeSafeTranslation } from 'hooks/useTypeSafeTranslation';
-import AuthProviderButton from 'components/atoms/AuthProviderButton';
-import { Facebook, GitHub } from '@material-ui/icons';
-import { Grid, Hidden, Tab, Tabs } from '@material-ui/core';
-
-import { localLogin, localRegister } from 'apis/auth.api';
 import { loginAction } from 'redux/actions/auth.action';
-import { PATH_NAME } from 'configs';
-import useStyles from './styles';
+
 import LoginForm from './components/loginForm';
 import RegisterForm from './components/RegisterForm';
+import useStyles from './styles';
 
 enum tabs {
   LOGIN,

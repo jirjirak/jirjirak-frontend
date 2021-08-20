@@ -1,13 +1,11 @@
-import React from 'react';
-
 // material cores
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-
 // material icons
 import WarningIcon from '@material-ui/icons/Warning';
+import React from 'react';
 
 // styles
 import useStyles from './styles';

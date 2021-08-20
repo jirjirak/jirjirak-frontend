@@ -1,4 +1,5 @@
-import { useState, Dispatch, SetStateAction, useCallback, useEffect, useRef } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const useMounted = () => {
   const mountedRef = useRef(false);

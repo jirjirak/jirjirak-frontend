@@ -1,8 +1,8 @@
 // material core
 import { createMuiTheme } from '@material-ui/core';
 
-import light from './light';
 import dark from './dark';
+import light from './light';
 import typography from './typography';
 
 const typeTheme = [light, dark];

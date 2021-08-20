@@ -1,15 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react';
-import WaveSurfer from 'wavesurfer.js';
-
 // material core
 import Grid from '@material-ui/core/Grid';
-
+import PauseIcon from '@material-ui/icons/Pause';
 // material icon
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import PauseIcon from '@material-ui/icons/Pause';
-
 // helpers
 import { secondToTime } from 'helpers';
+import React, { useEffect, useRef, useState } from 'react';
+import WaveSurfer from 'wavesurfer.js';
 
 // styles
 import useStyles from './styles';

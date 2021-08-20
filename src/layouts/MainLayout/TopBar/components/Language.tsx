@@ -1,18 +1,14 @@
-import React, { useState, memo } from 'react';
-
-// material core
-import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
-
+// material core
+import MenuItem from '@material-ui/core/MenuItem';
 // material icon
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
 // configs
 import { LANGUAGE } from 'configs';
-
 // context
 import { useGlobalContext } from 'context/GlobalContext';
+import React, { memo, useState } from 'react';
 
 function Language({ ...classes }) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);

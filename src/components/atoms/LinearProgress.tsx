@@ -1,10 +1,9 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Backdrop from '@material-ui/core/Backdrop';
 import LinearProgress from '@material-ui/core/LinearProgress';
-
+import type { Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
+import React from 'react';
+import { useSelector } from 'react-redux';
 // selectors
 import { isLoadingSelector } from 'redux/selectors/app.selector';
 

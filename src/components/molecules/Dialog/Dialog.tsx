@@ -1,6 +1,3 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
 // material core
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -9,10 +6,10 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Typography from '@material-ui/core/Typography';
-
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 // actions
 import { setDialog } from 'redux/actions/app.action';
-
 // selectors
 import { dialogSelector } from 'redux/selectors/app.selector';
 

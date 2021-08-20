@@ -1,13 +1,11 @@
-import auth0, { Auth0Error, Auth0DecodedHash } from 'auth0-js';
-
+import type { Auth0DecodedHash, Auth0Error } from 'auth0-js';
+import auth0 from 'auth0-js';
 // configs
 import { PATH_NAME } from 'configs';
-
 // helpers
 import { parseJwt } from 'helpers';
-
 // types
-import { IUser } from 'models/IUser';
+import type { IUser } from 'models/IUser';
 
 interface IAuth0DecodedHash extends Auth0DecodedHash {
   idToken: string;

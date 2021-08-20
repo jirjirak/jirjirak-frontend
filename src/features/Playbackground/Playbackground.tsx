@@ -1,7 +1,6 @@
+import useGet from 'hooks/useGet';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import useGet from 'hooks/useGet';
-
 // action
 import { enqueueSnackbarAction } from 'redux/actions/app.action';
 

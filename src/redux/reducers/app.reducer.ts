@@ -1,4 +1,5 @@
-import { IAppActionTypes, IAppActionCreator, IAppState } from 'models/IAppState';
+import type { IAppActionCreator, IAppState } from 'models/IAppState';
+import { IAppActionTypes } from 'models/IAppState';
 
 const initialState: IAppState = {
   isLoading: false,

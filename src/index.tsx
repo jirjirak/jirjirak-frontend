@@ -1,21 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+// i18n
+import 'locales/i18n';
+// styles
+import './index.css';
 
 // context
 import { GlobalProvider } from 'context/GlobalContext';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 // stores
 import store from 'stores';
 
-// i18n
-import 'locales/i18n';
-
 // components
 import App from './App';
-
-// styles
-import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

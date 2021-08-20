@@ -1,8 +1,7 @@
-import { AbilityBuilder, Ability } from '@casl/ability';
-import store from 'stores';
-
+import { Ability, AbilityBuilder } from '@casl/ability';
 // configs
-import { USER_ROLE, DRAWER_MENU_LABEL } from 'configs';
+import { DRAWER_MENU_LABEL, USER_ROLE } from 'configs';
+import store from 'stores';
 
 function defineAbilitiesFor(type: string) {
   const { can, cannot, build } = new AbilityBuilder(Ability);

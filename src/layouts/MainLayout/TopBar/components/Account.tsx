@@ -1,23 +1,18 @@
-import React, { useState, memo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router';
-import { useTranslation } from 'react-i18next';
-
+import Divider from '@material-ui/core/Divider';
 // material core
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import Divider from '@material-ui/core/Divider';
-
 // material icon
 import AccountCircle from '@material-ui/icons/AccountCircle';
-
 // configs
 import { PATH_NAME } from 'configs';
-
+import React, { memo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
 // actions
 import { logout } from 'redux/actions/auth.action';
-
 // selectors
 import { roleSelector } from 'redux/selectors/auth.selector';
 

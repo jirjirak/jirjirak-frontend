@@ -54,6 +54,7 @@
     "jsx-a11y/click-events-have-key-events": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/consistent-type-imports": "error",
     "import/no-cycle": "off",
     "@typescript-eslint/no-shadow": "off",
     "@typescript-eslint/indent": "off",

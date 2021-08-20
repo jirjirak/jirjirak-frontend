@@ -1,10 +1,9 @@
-import React, { FC, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-
 // configs
 import { PATH_NAME } from 'configs';
-
+import type { FC } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 // selectors
 import { roleSelector } from 'redux/selectors/auth.selector';
 

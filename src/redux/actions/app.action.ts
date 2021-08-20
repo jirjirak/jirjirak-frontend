@@ -1,4 +1,5 @@
-import { IAppActionTypes, INotifer } from 'models/IAppState';
+import type { INotifer } from 'models/IAppState';
+import { IAppActionTypes } from 'models/IAppState';
 
 export const setLoading = (isLoading: boolean) => ({
   type: IAppActionTypes.SET_LOADING,

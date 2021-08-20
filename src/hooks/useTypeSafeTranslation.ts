@@ -1,6 +1,5 @@
-import { useTranslation } from 'react-i18next';
-
 import type sampleLangTransaltionKeys from 'locales/en.json';
+import { useTranslation } from 'react-i18next';
 
 interface DateTranslationType {
   time?: Date;

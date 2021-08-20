@@ -1,7 +1,6 @@
-import { createSelector } from 'reselect';
-
 // types
-import IRootState from 'models/IRootState';
+import type IRootState from 'models/IRootState';
+import { createSelector } from 'reselect';
 
 export const isLoadingSelector = createSelector(
   (state: IRootState) => state.app,
